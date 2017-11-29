@@ -18,9 +18,9 @@ class Order extends React.Component {
 
         return (
             <li key={key}>
-                <span>
+                <span> 
                     <CSSTransitionGroup
-                        conponent='span' 
+                        component='span' 
                         className='count'
                         transitionName='count'
                         transitionEnterTimeout={250}
@@ -46,7 +46,7 @@ class Order extends React.Component {
             } else {
                 return prevTotal;
             }
-        }, 0);
+        }, 0); 
         return (
             <div className='order-wrap'>
                 <h2>Your Order</h2>
