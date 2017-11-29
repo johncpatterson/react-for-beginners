@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddFish extends React.Component {
+class AddFishForm extends React.Component {
     createFish(event) {
         event.preventDefault();
         console.log('Gonna make some fish')
@@ -31,4 +31,4 @@ class AddFish extends React.Component {
     }
 }
 
-export default AddFish;
+export default AddFishForm;
