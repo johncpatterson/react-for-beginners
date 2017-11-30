@@ -109,8 +109,9 @@ class App extends React.Component {
                                     key={key} 
                                     index={key} 
                                     details={this.state.fishes[key]} 
-                                    addToOrder={this.addToOrder} />
-                                )
+                                    addToOrder={this.addToOrder} 
+                                />
+                            )
                         }    
                     </ul>
                 </div>
@@ -118,20 +119,23 @@ class App extends React.Component {
                     fishes={this.state.fishes} 
                     order={this.state.order} 
                     params={this.props.params} 
-                    removeFromOrder={this.removeFromOrder}/>
+                    removeFromOrder={this.removeFromOrder}
+                />
                 <Inventory 
                     addFish={this.addFish} 
                     loadSamples={this.loadSamples} 
                     fishes={this.state.fishes} 
                     updateFish={this.updateFish} 
-                    removeFish={this.removeFish}/>    
+                    removeFish={this.removeFish}
+                    storeId={this.props.params.storeId }
+                />    
             </div>
         )
-    }
+    } 
 }
 
 App.propTypes = {
-    params: React.PropTypes.object.isRequired
+    params: React.PropTypes.object.isRequired,
 }
 
 export default App;
