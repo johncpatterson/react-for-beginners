@@ -33,7 +33,8 @@ class Order extends React.Component {
 						className="count"
 						transitionName="count"
 						transitionEnterTimeout={250}
-						transitionLeaveTimeout={250}>
+						transitionLeaveTimeout={250}
+					>
 						<span key={count}>
 							<strong>{count}</strong>
 						</span>
@@ -64,7 +65,8 @@ class Order extends React.Component {
 					component="ul"
 					transitionName="order"
 					transitionEnterTimeout={500}
-					transitionLeaveTimeout={500}>
+					transitionLeaveTimeout={500}
+				>
 					{orderIds.map(this.renderOrder)}
 					<li className="total">
 						<strong>Total:</strong>

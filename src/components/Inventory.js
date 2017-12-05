@@ -60,7 +60,8 @@ class Inventory extends React.Component {
 					name="status"
 					value={fish.status}
 					placeholder="Fish Status"
-					onChange={e => this.handleChange(e, key)}>
+					onChange={e => this.handleChange(e, key)}
+				>
 					<option value="available">Fresh!</option>
 					<option value="unavailable">Sold Out!</option>
 				</select>
@@ -93,7 +94,8 @@ class Inventory extends React.Component {
 				{/* <button className='github' onClick={() => this.authenticate('github')}>Log in with Github</button> */}
 				<button
 					className="facebook"
-					onClick={() => this.authenticate('facebook')}>
+					onClick={() => this.authenticate('facebook')}
+				>
 					Log in with Facebook
 				</button>
 				{/* <button className='twitter' onClick={() => this.authenticate('twitter')}>Log in with Twitter</button> */}
