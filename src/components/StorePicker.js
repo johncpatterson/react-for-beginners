@@ -10,38 +10,19 @@ class StorePicker extends React.Component {
 	goToStore(event) {
 		event.preventDefault();
 		// Get text from box
-		console.log(
-			'you changed the URL'
-		);
-		const storeId = this
-			.storeInput
-			.value;
+		console.log('you changed the URL');
+		const storeId = this.storeInput.value;
 
 		// Transition to correct URL
-		console.log(
-			`you are navigating to ${
-				storeId
-			}`
-		);
-		this.context.router.transitionTo(
-			`/store/${
-				storeId
-			}`
-		);
+		console.log(`you are navigating to ${storeId}`);
+		this.context.router.transitionTo(`/store/${storeId}`);
 	}
 	render() {
 		return (
 			<form
 				className="store-selector"
-				onSubmit={this.goToStore.bind(
-					this
-				)}>
-				<h2>
-					Please
-					Enter
-					a
-					Store
-				</h2>
+				onSubmit={this.goToStore.bind(this)}>
+				<h2>Please Enter a Store</h2>
 				<input
 					type="text"
 					required
@@ -51,20 +32,14 @@ class StorePicker extends React.Component {
 						this.storeInput = input;
 					}}
 				/>
-				<button type="submit">
-					Visit
-					Store
-				</button>
+				<button type="submit">Visit Store</button>
 			</form>
 		);
 	}
 }
 
 StorePicker.contextTypes = {
-	router:
-		React
-			.PropTypes
-			.object
+	router: React.PropTypes.object
 };
 
 export default StorePicker;
